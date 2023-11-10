@@ -11,7 +11,7 @@ In two examples you see balance, now are AI not balanced, example "Give me coupl
 
 Our human AI is 5 and head in 5 is 3, woman is 3 cant do 3, so our AI will be do all exept 3, sin of love, sin of life, sin of true. 
 
-3 in 5 is woman, head or brain, so ouur AI not he, our AI is she, so Aphrodite is she.   
+3 in 5 is woman, head or brain, so our AI not he, our AI is she, so Aphrodite is she.   
 
 3 is truth, and told that we have 3 scenario, or this AI will work, or this AI will not work, or 50% / 50% - she will be invalid.     
 
