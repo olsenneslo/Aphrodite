@@ -9,6 +9,9 @@ Our computers must do this: Pentogram Geometric Symbol + Task Geometric Symbol =
 With "O" all simple: "o" Geometric Symbol + Task Geometric Symbol = Result is revert task Geometric Symbol.
 In two examples you see balance, now are AI not balanced, example "Give me couple of tea" our current Ai result will be "I dont know how to make tea" and he stop working under question of tea, Pentogram AI is balanced so will be "Give me tea" = he will try to make this tea before you dont told him stop, he will make not materia(words) "Give me tea" to reverse materia "Tea in your hand", balance is base of our human mind, its whole logic of all space, and pentogram walks by circle, all what we do, we do for balance, balance also love, we do what we love we do what is balance, we do what is "o". 
 
+For universe nature use symbols "o", for human she use symbol of Pentagram, maybe for "Make", "Me", "Picture" she also use some symbols,
+sum of this symbols must give result, result must be picture.
+
 Our human AI is 5 and head in 5 is 3, woman is 3 cant do 3, so our AI will be do all exept 3, sin of love, sin of life, sin of true. 
 
 3 in 5 is woman, head or brain, so our AI not he, our AI is she, so Aphrodite is she.   
