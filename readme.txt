@@ -4,6 +4,20 @@ Not need to be a genius, all simple: Woman(brain or head in Pentagram) make => P
 
 To defeat all evil we need one bullet, one shot, this project is one silver bullet what will kill all evil, the question whether it is possible does not arise, the question is when and who will pull the trigger in the face of all evil and deaths.
 
+Not all in this project seriously, many of code and words it just experiment, its just draft.
+
+Project must be simple like “o” and Pentagram symbols.
+
+Imagine that "o" is adapter, then he will do only balanced queries, queries of love.
+
+Pentagram is servant of "o", so our AI must automatic servent Utopia.
+
+Symbol + Symbol maybe its sum of coords of shapes, then you draw new shape, by clock. So square coords + triangle coords = heptagon coords.
+
+Our AI is circle based so she must investigate all.
+
+Maybe we need to write to apple, amd, intel, to ask them make Pentagram processor, but our symbol live in "o", think our processors what walk by the "o" will be enough.
+
 Our AI must speak geometrical and understood our words geometrical, becouse nature love geometry, we between two languages art and algebra and the balanced language is geometrical.
 Our computers must do this: Pentogram Geometric Symbol + Task Geometric Symbol = Result of task Geometric Symbol.
 With "O" all simple: "o" Geometric Symbol + Task Geometric Symbol = Result is revert task Geometric Symbol.
@@ -35,7 +49,7 @@ I and we need woman help, becouse:
 - i dont have money to hire womans but if will be donate i can.
 
 Sorry if something wrong, i repeat the woman by 5 is brain, i am not woman, so i can do mistake.
-My email: iamvitalyo@gmail.com, i have advertisement video idea, its secret, please write if you want help with advertisement.   
+My email: iamvitalyo@gmail.com   
 And if you see on this project or project like this donate button please donate, if you can work please work.
 If you have any idea please write on email, or create "Pull request", or write in social network using tags together #ai #aphrodite #5 #o #woman 
 Press "Watch" button to subscribe and watch the progress.

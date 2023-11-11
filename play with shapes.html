@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Сітка з колом</title>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Розміри канвасу у пікселях (вираховані з розмірів в сантиметрах та DPI)
+        const canvasWidth = 960; // 96 см * 100 DPI
+        const canvasHeight = 960; // 96 см * 100 DPI
+
+        // Розмір ячейки у пікселях (вирахований з розміру в сантиметрах та DPI)
+        const cellSize = 60; // 6 см * 100 DPI
+
+        // Кількість рядків і стовпців сітки
+        const numCols = canvasWidth / cellSize;
+        const numRows = canvasHeight / cellSize;
+
+        // Встановлення розмірів канвасу
+        canvas.width = canvasWidth;
+        canvas.height = canvasHeight;
+
+        // Малюємо сітку
+        for (let row = 0; row <= numRows; row++) {
+            ctx.beginPath();
+            ctx.moveTo(0, row * cellSize);
+            ctx.lineTo(canvasWidth, row * cellSize);
+            ctx.stroke();
+        }
+
+        for (let col = 0; col <= numCols; col++) {
+            ctx.beginPath();
+            ctx.moveTo(col * cellSize, 0);
+            ctx.lineTo(col * cellSize, canvasHeight);
+            ctx.stroke();
+        }
+
+        // Малюємо коло, яке заповнює весь канвас
+        const centerX = canvasWidth / 2;
+        const centerY = canvasHeight / 2;
+        const radius = Math.min(canvasWidth, canvasHeight) / 2;
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+        ctx.fillStyle = 'transparent'; // Колір заливки
+        ctx.fill();
+        ctx.strokeStyle = 'black'; // Колір контуру
+        ctx.lineWidth = 2; // Ширина контуру
+        ctx.stroke();
+
+        // Draw Coordinate Axes
+        ctx.beginPath();
+
+        // X-axis (horizontal line)
+        ctx.moveTo(0, centerY);
+        ctx.lineTo(canvasWidth, centerY);
+
+        // Y-axis (vertical line)
+        ctx.moveTo(centerX, 0);
+        ctx.lineTo(centerX, canvasHeight);
+
+        ctx.strokeStyle = 'red'; // Set color to red (you can change it to your desired color)
+        ctx.lineWidth = 2; // Set line width
+
+        ctx.stroke();
+
+        function drawShape(coordinates, fillColor, strokeColor, lineWidth) {
+            ctx.save(); // Save the current context state
+
+            ctx.beginPath();
+            ctx.moveTo(centerX + coordinates[0][0] * cellSize, centerY - coordinates[0][1] * cellSize);
+
+            for (let i = 1; i < coordinates.length; i++) {
+                ctx.lineTo(centerX + coordinates[i][0] * cellSize, centerY - coordinates[i][1] * cellSize);
+            }
+
+            ctx.closePath();
+
+            // Set styles
+            if (fillColor) {
+                ctx.fillStyle = fillColor;
+                ctx.fill();
+            }
+
+            if (strokeColor) {
+                ctx.strokeStyle = strokeColor;
+            }
+
+            if (lineWidth) {
+                ctx.lineWidth = lineWidth;
+            }
+
+            // Draw the shape
+            ctx.stroke();
+
+            ctx.restore(); // Restore the context state to avoid affecting subsequent shapes
+        }
+
+        function drawShapes(shapes, fillColor, strokeColor, lineWidth) {
+            for (let shape of shapes) {
+                drawShape(shape, fillColor, strokeColor, lineWidth);
+            }
+        }
+
+
+        // maybe better to use formula of each shape, but its also ok.
+
+        const line = [[0, 8], [0, -8]];
+        const triangel = [[0, 8], [7, -4], [-7, -4]];
+        const square = [[0, 8], [8, 0], [0, -8], [-8, 0]];
+        const pentagon = [[0, 8], [7.5, 2.5], [4.5, -6.5], [-4.5, -6.5], [-7.5, 2.5]];
+        const pentagram = [[0, 8], [4.5, -6.5], [-7.5, 2.5], [7.5, 2.5], [-4.5 ,-6.5]];
+        const hexagon = [[0, 8], [7, 4], [7, -4], [0, -8], [-7, -4], [-7, 4]];
+        const heptagon = [[0, 8], [6, 5], [7.5, -2], [3.5, -7], [-3.5, -7], [-7.5, -2], [-6, 5]];
+        const octagon = [[0, 8], [5.5, 5.5], [8, 0], [5.5, -5.5], [0, -8], [-5.5, -5.5], [-8, 0], [-5.5, 5.5]];
+        const nonagon = [[0, 8], [5, 6], [8, 2], [7, -4], [3, -7.5], [-3, -7.5], [-7, -4], [-8, 2], [-5, 6]];
+        const decagon = [[0, 8], [4.5, 6.5], [7.5, 2.5], [7.5, -2.5], [4.5, -6.5], [0, -8], [-4.5, -6.5], [-7.5, -2.5], [-7.5, 2.5], [-4.5, 6.5]];
+        const undecagon = [[0, 8], [4.5, 6.5], [7, 3], [8, -1], [6, -5], [2.5, -7.5], [-2.5, -7.5], [-6, -5], [-8, -1], [-7, 3], [-4.5, 6.5]];
+        const dodecagon = [[0, 8], [4, 7], [7, 4], [8, 0], [7, -4], [4, -7], [0, -8], [-4, -7], [-7, -4], [-8, 0], [-7, 4], [-4, 7]];
+        const tridecagon = [[0, 8], [4, 7], [6.5, 4.5], [8, 1], [7.5, -3], [5, -6], [2, -8], [-2, -8], [-5, -6], [-7.5,-3], [-8, 1], [-6.5, 4.5], [-4, 7]];
+        const tetradecagon = [[0, 8], [4, 7], [7, 4], [8, 0], [7, -4], [4, -7], [0, -8], [-4, -7], [-7, -4], [-8, 0], [-7, 4], [-4, 7]];
+        const pentadecagon = [[0, 8], [4, 7], [6.5, 4.5], [8, 1], [7.5, -3], [5.5, -6], [2, -7.5], [-2, -7.5], [-5, -6], [-7.5, -3], [-8, 1], [-6.5, 4.5], [-4, 7]]; 
+        const hexadecagon = [[0, 8], [3, 7.5], [5.5, 5.5], [7.5, 3], [8, 0], [7.5, -3], [5.5, -5.5], [3, -7.5], [0, -8], [-3, -7.5], [-5.5, -5.5], [-7.5, -3], [-8, 0], [-7.5, 3], [-5.5, 5.5], [-3, 7.5]];
+
+
+        const shapesCoords = [[[0, 0]], line, triangel, square, pentagon, hexagon, heptagon, octagon, nonagon, decagon, undecagon, dodecagon, tridecagon, tetradecagon, pentadecagon, hexadecagon];
+
+        function replaceValues(array) {
+          var arrayResult = [];
+
+          for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+              arrayResult.push(shapesCoords[Math.abs(Math.round(array[i][j]))]);
+              
+            }
+          }
+
+          return arrayResult.flat();
+        }
+
+        var arrayOfArrays = replaceValues(pentagram);
+        drawShape(arrayOfArrays, 'transparent', 'red', 2);
+
+        var arrayOfArrays = replaceValues(arrayOfArrays);
+        drawShape(arrayOfArrays, 'transparent', 'red', 2);
+    </script>
+</body>
+</html>
