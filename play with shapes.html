@@ -139,7 +139,19 @@
             }
           }
 
-          return arrayResult.flat();
+          arrayResult = arrayResult.flat();
+          arrayResult = arrayResult.slice().sort((a, b) => {
+            // Compare x values first
+            if (a[0] !== b[0]) {
+              return a[0] - b[0];
+            }
+            // If x values are equal, compare y values
+            return a[1] - b[1];
+          });
+
+          console.log()
+
+          return arrayResult;
         }
 
         var arrayOfArrays = replaceValues(pentagram);
